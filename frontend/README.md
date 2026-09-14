@@ -10,7 +10,7 @@ npm run lint
 npm run build
 ```
 
-Use `dist` as the static host output directory and `amit` as the project root. Set `VITE_API_URL` to the deployed backend URL ending in `/api`; without it, the contact form calls `/api` on the same domain.
+Use `dist` as the static host output directory and `frontend` as the project root. Set `VITE_API_URL` to the deployed backend URL ending in `/api`; without it, the contact form calls `/api` on the same domain.
 
 The backend is deployed separately from `backend` with `npm install` and `npm start`. Configure its database variables from `backend/.env.example`, set `FRONTEND_URL` to the frontend origin, and let the host provide `PORT`.
 
