@@ -1,100 +1,33 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
+import React from 'react'
+import { motion as Motion } from 'framer-motion'
+import { FaReact, FaCode, FaServer, FaRobot, FaDatabase, FaTools, FaMobileAlt, FaCloud } from 'react-icons/fa'
+import ProjectCard from './ProjectCard'
 
 // Project images
-import aiSentimentImg from './project/ai -sentimet.png';
-import aiCustomerImg from './project/aicostumar.jpg';
-import nabhaImg from './project/nabha.png';
-import speshImg from './project/spesh.png';
-import intecImg from './project/intec.png';
-import hospitalImg from './project/hospital.png';
-import portfolioImg from './project/potfolio.png';
-import freelancingImg from './project/frilansing.png';
-import realsImg from './project/reals.png';
-import railwayProjectImg from './project/relway.png';
-import blindImg from './project/bilnd.png';
+import aiSentimentImg from '../assets/project/ai -sentimet.png'
+import aiCustomerImg from '../assets/project/aicostumar.jpg'
+import nabhaImg from '../assets/project/nabha.png'
+import speshImg from '../assets/project/spesh.png'
+import intecImg from '../assets/project/intec.png'
+import hospitalImg from '../assets/project/hospital.png'
+import portfolioImg from '../assets/project/potfolio.png'
+import freelancingImg from '../assets/project/frilansing.png'
+import realsImg from '../assets/project/reals.png'
+import railwayProjectImg from '../assets/project/relway.png'
+import blindImg from '../assets/project/bilnd.png'
 
 // Hardware images
-import electresaImg from './Hadware/electresa .png';
-import bluecarImg from './Hadware/blucar .png';
-import dustbinImg from './Hadware/dustbin.png';
-import firecarImg from './Hadware/firecar.png';
-import healthcareImg from './Hadware/healthcare.png';
-import homeImg from './Hadware/home.png';
-import obscarImg from './Hadware/obscar.png';
-import pumpImg from './Hadware/pump.png';
-import railwayHardwareImg from './Hadware/relway.png';
-import sanket from '../assets/Amit.jpeg';
+import electresaImg from '../assets/Hadware/electresa .png'
+import bluecarImg from '../assets/Hadware/blucar .png'
+import dustbinImg from '../assets/Hadware/dustbin.png'
+import firecarImg from '../assets/Hadware/firecar.png'
+import healthcareImg from '../assets/Hadware/healthcare.png'
+import homeImg from '../assets/Hadware/home.png'
+import obscarImg from '../assets/Hadware/obscar.png'
+import pumpImg from '../assets/Hadware/pump.png'
+import railwayHardwareImg from '../assets/Hadware/relway.png'
 
-
-export const assets = {
-    sanket
-}
-
-export const aboutInfo = [
-    {
-      icon: FaLightbulb,
-      title: 'Innovative',
-      description: 'I love creating unique solutions to complex problems with cutting-edge technologies.',
-      color: 'text-purple'
-    },
-    {
-      icon: FaPaintBrush,
-      title: 'Design Oriented',
-      description: 'Beautiful design and user experience are at the heart of everything I create.',
-      color: 'text-pink'
-    },
-    {
-      icon: FaCode,
-      title: 'Clean Code',
-      description: 'I write maintainable, efficient code following best practices and modern patterns.',
-      color: 'text-blue'
-    }
-  ];
-
-
-
-export const skills = [
-  {
-    title: 'Frontend Development',
-    icon: FaReact,
-    description: 'Building responsive and interactive user interfaces with modern frameworks.',
-    tags: ['React', 'HTML', 'CSS', 'JavaScript', 'Tailwind CSS']
-  },
-  {
-    title: 'Backend Development',
-    icon: FaServer,
-    description: 'Creating robust server-side applications and RESTful APIs.',
-    tags: ['Node.js', 'Express', 'Flask']
-  },
-  {
-    title: 'Database Management',
-    icon: FaDatabase,
-    description: 'Designing and optimizing databases for performance and scalability.',
-    tags: ['MongoDB', 'PostgreSQL', 'MySQL']
-  },
-  {
-    title: 'Machine Learning & AI',
-    icon: FaRobot,
-    description: 'Building intelligent applications using machine learning and artificial intelligence.',
-    tags: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn']
-  },
-  {
-    title: 'Cloud & DevOps',
-    icon: FaCloud,
-    description: 'Deploying and managing applications in cloud environments.',
-    tags: ['AWS', 'Docker', 'Kubernetes']
-  },
-  {
-    title: 'Tools & Programming Languages',
-    icon: FaTools,
-    description: 'Essential tools and technologies I use in my development workflow.',
-    tags: ['Git & GitHub', 'Webpack', 'Figma', 'Java', 'Python', 'C']
-  }
-];
-
-
-export const projects = [
-
+const projects = [
   {
     title: "Electrixa",
     description: "A student-focused technology platform for learning, hardware projects, software development, courses, kits and engineering resources.",
@@ -103,7 +36,6 @@ export const projects = [
     icons: [FaReact, FaCode, FaServer],
     code: "https://github.com/Amityaduvanshi203/Electrixa",
   },
-
   {
     title: "AI-Based Citizen Feedback Analysis",
     description: "An AI-powered system that analyzes citizen feedback using NLP and machine learning to identify issues and generate department-wise insights.",
@@ -112,7 +44,6 @@ export const projects = [
     icons: [FaRobot, FaServer, FaDatabase],
     code: "https://github.com/Amityaduvanshi203/Sentiment-analyzer",
   },
-
   {
     title: "Sentiment Analyzer",
     description: "An AI-based application that analyzes text feedback and classifies user opinions into different sentiment categories using NLP techniques.",
@@ -121,7 +52,6 @@ export const projects = [
     icons: [FaRobot, FaServer, FaDatabase],
     code: "https://github.com/Amityaduvanshi203/Sentiment-analyzer",
   },
-
   {
     title: "Railway Track Safety System",
     description: "An embedded safety system designed to detect railway track problems and provide early warnings to help prevent railway accidents.",
@@ -130,7 +60,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "https://github.com/Amityaduvanshi203/Railway_track",
   },
-
   {
     title: "Nabha Student Learning Platform",
     description: "A digital learning platform designed to provide rural students with educational content, learning resources and offline-friendly access.",
@@ -139,7 +68,6 @@ export const projects = [
     icons: [FaReact, FaCode, FaMobileAlt],
     code: "https://github.com/Amityaduvanshi203/Nabha--student",
   },
-
   {
     title: "Scroll",
     description: "A modern responsive web project focused on smooth scrolling, interactive sections and an engaging user interface experience.",
@@ -148,7 +76,6 @@ export const projects = [
     icons: [FaReact, FaCode],
     code: "https://github.com/Amityaduvanshi203/Scroll--relecx",
   },
-
   {
     title: "Kishore Chandak",
     description: "A modern web project developed to present information and services through a responsive interface with a clean and user-friendly design.",
@@ -157,7 +84,6 @@ export const projects = [
     icons: [FaReact, FaCode],
     code: "https://github.com/Amityaduvanshi203/kishore-chandak-..-web-page-",
   },
-
   {
     title: "InTech Heritage",
     description: "A heritage-focused digital platform designed to present cultural information, locations and historical content through an interactive website.",
@@ -166,7 +92,6 @@ export const projects = [
     icons: [FaReact, FaCode],
     code: "https://github.com/Amityaduvanshi203/-Intach-Solapur-heritage",
   },
-
   {
     title: "Hospital Management System",
     description: "A web-based hospital management solution designed to manage patients, doctors, appointments and essential healthcare information efficiently.",
@@ -175,7 +100,6 @@ export const projects = [
     icons: [FaReact, FaServer, FaDatabase],
     code: "",
   },
-
   {
     title: "SpaceWorld",
     description: "An educational website that helps students explore the solar system, planets, astronauts and space missions through interactive content.",
@@ -184,7 +108,6 @@ export const projects = [
     icons: [FaCode, FaMobileAlt],
     code: "https://github.com/Amityaduvanshi203/SpaceWorld",
   },
-
   {
     title: "Amit Portfolio",
     description: "A responsive personal portfolio website showcasing my technical skills, projects, experience, achievements and professional journey.",
@@ -193,7 +116,6 @@ export const projects = [
     icons: [FaReact, FaCode],
     code: "https://github.com/Amityaduvanshi203/Amit--portfolio",
   },
-
   {
     title: "Freelancing Platform",
     description: "A web platform designed for freelancers and clients with features for authentication, project listings, searching and user interactions.",
@@ -202,7 +124,6 @@ export const projects = [
     icons: [FaReact, FaServer, FaDatabase],
     code: "https://github.com/Amityaduvanshi203/Freelancing-platform",
   },
-
   {
     title: "Bluetooth Control Car",
     description: "A Bluetooth-controlled robotic car that receives commands from a mobile device and controls the movement of the vehicle wirelessly.",
@@ -211,7 +132,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "",
   },
-
   {
     title: "Obstacle Avoidance Car",
     description: "An autonomous robotic car that detects obstacles using sensors and automatically changes its direction to avoid collisions.",
@@ -220,7 +140,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "",
   },
-
   {
     title: "Fire Fighting Car",
     description: "An autonomous robotic vehicle designed to detect fire and move toward the affected area to perform basic fire extinguishing operations.",
@@ -229,7 +148,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "",
   },
-
   {
     title: "Health Care Monitoring System using ESP32",
     description: "An IoT-based healthcare monitoring system that collects health parameters using sensors and provides real-time monitoring through ESP32.",
@@ -238,7 +156,6 @@ export const projects = [
     icons: [FaTools, FaCloud, FaDatabase],
     code: "",
   },
-
   {
     title: "Smart Dustbin",
     description: "An automated smart dustbin that uses sensors to detect nearby objects and open the lid automatically for touch-free waste disposal.",
@@ -247,7 +164,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "",
   },
-
   {
     title: "Smart Water Pump for Agriculture",
     description: "An automated agricultural irrigation system that monitors soil conditions and controls the water pump to improve water usage efficiency.",
@@ -256,7 +172,6 @@ export const projects = [
     icons: [FaTools, FaCloud],
     code: "",
   },
-
   {
     title: "Smart Blind Stick",
     description: "An assistive smart stick that uses sensors to detect obstacles and provide alerts to help visually impaired users navigate safely.",
@@ -265,7 +180,6 @@ export const projects = [
     icons: [FaTools, FaCode],
     code: "",
   },
-
   {
     title: "Railway Accident Prevention System",
     description: "An embedded railway safety solution designed to detect dangerous conditions and provide warnings to reduce the possibility of railway accidents.",
@@ -274,7 +188,6 @@ export const projects = [
     icons: [FaTools, FaCloud],
     code: "",
   },
-
   {
     title: "Smart Home",
     description: "An IoT-based smart home system that enables automated monitoring and control of household appliances using sensors and connected devices.",
@@ -283,16 +196,40 @@ export const projects = [
     icons: [FaTools, FaCloud],
     code: "",
   },
-
 ];
 
-export const workData = [
-  {
-    role: "Data Analyst",
-    company: "Skillified Mentor",
-    duration: "2025",
-    description:
-      "Analyzed bank marketing data using Python (Pandas, NumPy, Matplotlib) to identify key factors influencing customer term deposit decisions. Built and evaluated predictive ML models to enhance campaign success insights and support data-driven marketing strategies.",
-    color: "purple"
-  },
-];
+const Projects = () => {
+    return (
+        <Motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.1 }}
+            id='projects'
+            className='py-16 md:py-24 bg-dark-200 overflow-hidden'
+        >
+            <div className='container mx-auto px-4 md:px-6'>
+                <h2 className='text-3xl md:text-5xl font-bold mb-4 text-center'>
+                    My <span className='text-purple-100'>Projects</span>
+                </h2>
+
+                <p className='text-gray-400 text-center text-sm md:text-base max-w-2xl mx-auto mb-12 md:mb-16'>
+                    A selection of my recent work.
+                </p>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto justify-items-center'>
+                    {Array.isArray(projects) && projects.length > 0 ? (
+                        projects.map((project, index) => (
+                            <div key={index} className="w-full max-w-100 md:max-w-none">
+                                <ProjectCard {...project} />
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-gray-500 col-span-full">No projects found.</p>
+                    )}
+                </div>
+            </div>
+        </Motion.div>
+    )
+}
+
+export default Projects
