@@ -5,7 +5,7 @@
 Install dependencies and build the production frontend from this directory:
 
 ```bash
-npm install
+npm install 
 npm run lint
 npm run build
 ```

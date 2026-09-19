@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion as Motion } from 'framer-motion'
-import { FaReact, FaCode, FaServer, FaRobot, FaDatabase, FaTools, FaMobileAlt, FaCloud } from 'react-icons/fa'
+import { FaReact, FaCode, FaServer, FaRobot, FaDatabase, FaTools, FaMobileAlt, FaCloud, FaPython, FaCamera, FaMicrochip, FaChartLine } from 'react-icons/fa'
 import ProjectCard from './ProjectCard'
 
 // Project images
@@ -15,6 +15,9 @@ import freelancingImg from '../assets/project/frilansing.png'
 import realsImg from '../assets/project/reals.png'
 import railwayProjectImg from '../assets/project/relway.png'
 import blindImg from '../assets/project/bilnd.png'
+import heritageChatbotImg from '../assets/project/chatbot-heriteg.png'
+import faceDetectionImg from '../assets/project/face.png'
+import kishoreImg from '../assets/project/kishor.png'
 
 // Hardware images
 import electresaImg from '../assets/Hadware/electresa .png'
@@ -24,6 +27,7 @@ import firecarImg from '../assets/Hadware/firecar.png'
 import healthcareImg from '../assets/Hadware/healthcare.png'
 import homeImg from '../assets/Hadware/home.png'
 import obscarImg from '../assets/Hadware/obscar.png'
+import pavementImg from '../assets/Hadware/Pavement .png'
 import pumpImg from '../assets/Hadware/pump.png'
 import railwayHardwareImg from '../assets/Hadware/relway.png'
 
@@ -52,6 +56,7 @@ const projects = [
     icons: [FaRobot, FaServer, FaDatabase],
     code: "https://github.com/Amityaduvanshi203/Sentiment-analyzer",
   },
+  
   {
     title: "Railway Track Safety System",
     description: "An embedded safety system designed to detect railway track problems and provide early warnings to help prevent railway accidents.",
@@ -79,7 +84,7 @@ const projects = [
   {
     title: "Kishore Chandak",
     description: "A modern web project developed to present information and services through a responsive interface with a clean and user-friendly design.",
-    image: intecImg,
+    image: kishoreImg,
     tech: ["React", "JavaScript", "CSS", "Responsive Design"],
     icons: [FaReact, FaCode],
     code: "https://github.com/Amityaduvanshi203/kishore-chandak-..-web-page-",
@@ -196,6 +201,31 @@ const projects = [
     icons: [FaTools, FaCloud],
     code: "",
   },
+  {
+    title: "Face Detection System",
+    description: "A computer vision-based face detection system designed to detect and identify human faces using camera input and image processing techniques.",
+    image: faceDetectionImg,
+    tech: ["Python", "OpenCV", "Computer Vision", "AI"],
+    icons: [FaPython, FaCamera],
+    code: "",
+  },
+  {
+    title: "AI Heritage Chatbot",
+    description: "An AI-powered chatbot designed to provide information about Solapur's heritage, historical places, monuments, and cultural significance through an interactive conversational interface.",
+    image: heritageChatbotImg,
+    tech: ["Python", "AI", "NLP", "Chatbot", "React"],
+    icons: [FaRobot, FaPython],
+    code: "",
+  },
+  {
+    title: "Smart Pave",
+    description: "An IoT-based permeable pavement monitoring system that measures and analyzes water infiltration performance using sensors and an ESP32-based monitoring system.",
+    image: pavementImg,
+    tech: ["ESP32", "IoT", "Sensors", "FastAPI", "React"],
+    icons: [FaMicrochip, FaChartLine],
+    code: "",
+  },
+  
 ];
 
 const Projects = () => {

@@ -29,7 +29,7 @@ const Hero = () => {
                     <h1 className='text-4xl md:text-6xl font-bold mb-4 tracking-tight'>
                         Hi, I'm <span className='text-purple-100 drop-shadow-[0_0_25px_rgba(139,92,246,0.6)]'>Amit yadav</span>
                     </h1>
-                    <h2 className='text-2xl md:text-4xl font-semibold mb-6 typewriter text-gray-200'>Full Stack Developer</h2>
+                    <h2 className='text-2xl md:text-4xl font-semibold mb-6 typewriter text-gray-200'>Full Stack Developer | AI/ML | IoT & Embedded</h2>
                     <p className='text-lg text-gray-300 mb-8 max-w-lg leading-relaxed'>
                         I create stunning, high-performance web experiences with modern technologies, immersive 3D interactions, and innovative design.
                     </p>
