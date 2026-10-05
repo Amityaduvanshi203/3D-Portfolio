@@ -51,36 +51,36 @@ const Skills = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.1 }}
             id='skills'
-            className='py-20 bg-dark-100 relative overflow-hidden'
+            className='py-12 sm:py-16 md:py-20 bg-dark-100 relative overflow-hidden'
         >
-            <div className='container mx-auto px-6 relative z-10'>
-                <h2 className='text-3xl md:text-5xl font-bold mb-4 text-center'>
+            <div className='container mx-auto px-4 sm:px-6 relative z-10'>
+                <h2 className='text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-center'>
                     My <span className='text-purple-100 drop-shadow-[0_0_20px_rgba(139,92,246,0.4)]'>Skills</span>
                 </h2>
-                <p className='text-gray-400 text-center max-w-2xl mx-auto mb-16'>
+                <p className='text-gray-400 text-center text-sm sm:text-base max-w-2xl mx-auto mb-10 sm:mb-16'>
                     Technologies I work with to bring ideas to life
                 </p>
                 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto'>
                     {
                         skills.map((skill, index) => (
                             <TiltCard key={index} maxTilt={14} className='h-full'>
-                                <div className='bg-dark-200/90 border border-white/5 hover:border-purple-100/40 rounded-2xl p-6 transition-all duration-300 shadow-lg hover:shadow-[0_10px_25px_rgba(139,92,246,0.25)] flex flex-col h-full preserve-3d'>
-                                    <div className='flex items-center mb-4 translate-z-20'>
-                                        <div className='p-3 rounded-xl bg-purple-100/10 text-purple-100 mr-4 shadow-[0_0_15px_rgba(139,92,246,0.3)]'>
-                                            <skill.icon className='w-8 h-8' />
+                                <div className='bg-dark-200/90 border border-white/5 hover:border-purple-100/40 rounded-2xl p-4 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-[0_10px_25px_rgba(139,92,246,0.25)] flex flex-col h-full preserve-3d'>
+                                    <div className='flex items-center mb-3 sm:mb-4 translate-z-20'>
+                                        <div className='p-2.5 sm:p-3 rounded-xl bg-purple-100/10 text-purple-100 mr-3 sm:mr-4 shadow-[0_0_15px_rgba(139,92,246,0.3)]'>
+                                            <skill.icon className='w-6 h-6 sm:w-8 sm:h-8' />
                                         </div>
-                                        <h3 className='text-xl font-semibold text-white'>{skill.title}</h3>
+                                        <h3 className='text-base sm:text-lg md:text-xl font-semibold text-white'>{skill.title}</h3>
                                     </div>
-                                    <p className='text-gray-400 mb-6 text-sm flex-grow translate-z-10 leading-relaxed'>
+                                    <p className='text-gray-400 mb-4 sm:mb-6 text-xs sm:text-sm flex-grow translate-z-10 leading-relaxed'>
                                         {skill.description}
                                     </p>
-                                    <div className='flex flex-wrap gap-2 mt-auto translate-z-10'>
+                                    <div className='flex flex-wrap gap-1.5 sm:gap-2 mt-auto translate-z-10'>
                                         {
                                             skill.tags.map((tech) => (
                                                 <span 
                                                     key={tech} 
-                                                    className='px-3 py-1 bg-dark-400/80 border border-white/5 rounded-full text-xs text-gray-300 font-medium'
+                                                    className='px-2 sm:px-3 py-1 bg-dark-400/80 border border-white/5 rounded-full text-[10px] sm:text-xs text-gray-300 font-medium'
                                                 >
                                                     {tech}
                                                 </span>

@@ -2,17 +2,32 @@
 
 ## Deployment
 
-Install dependencies and build the production frontend from this directory:
+The repository-level `vercel.json` builds this frontend from the repository
+root. Keep the Vercel project root set to the repository root; Vercel installs
+from `frontend/package-lock.json`, builds with Vite, and publishes
+`frontend/dist`. The rewrite in `vercel.json` serves the SPA for direct URL
+loads.
+
+For a local production build, run from this directory:
 
 ```bash
-npm install 
+npm ci
 npm run lint
 npm run build
 ```
 
-Use `dist` as the static host output directory and `frontend` as the project root. Set `VITE_API_URL` to the deployed backend URL ending in `/api`; without it, the contact form calls `/api` on the same domain.
+In Vercel, configure `VITE_API_URL` as an environment variable to the deployed
+backend API base URL ending in `/api` (for example,
+`https://api.example.com/api`). This is a build-time variable, so redeploy after
+changing it. If it is unset, the forms call `/api` on the frontend domain, which
+only works when an API is also hosted there.
 
-The backend is deployed separately from `backend` with `npm install` and `npm start`. Configure its database variables from `backend/.env.example`, set `FRONTEND_URL` to the frontend origin, and let the host provide `PORT`.
+Deploy the backend separately from the `backend` directory with `npm install`
+and `npm start`. Configure the database variables, `FRONTEND_URL` (the deployed
+frontend origin), SMTP credentials, and `PROJECT_REQUEST_TO` from
+`backend/.env.example` in the backend host's environment settings. Let the host
+provide `PORT`; do not commit production secrets. The backend must be deployed
+and configured before the contact and project-request forms can work.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

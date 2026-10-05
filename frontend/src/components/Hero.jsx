@@ -19,36 +19,42 @@ const Hero = () => {
                 <ThreeCanvas />
             </div>
 
-            <div className='container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between'>
+            <div className='container mx-auto px-4 sm:px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8'>
                 {/* Left Side */}
-                <div className='md:w-1/2 mb-12 md:mb-0'>
-                    <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/10 border border-purple-100/30 text-purple-100 text-sm font-medium mb-6 backdrop-blur-md'>
+                <div className='md:w-1/2 mb-8 md:mb-0 text-center md:text-left'>
+                    <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/10 border border-purple-100/30 text-purple-100 text-xs sm:text-sm font-medium mb-6 backdrop-blur-md'>
                         <span className='w-2 h-2 rounded-full bg-purple-100 animate-ping'></span>
                         Interactive 3D Experience
                     </div>
-                    <h1 className='text-4xl md:text-6xl font-bold mb-4 tracking-tight'>
-                        Hi, I'm <span className='text-purple-100 drop-shadow-[0_0_25px_rgba(139,92,246,0.6)]'>Amit yadav</span>
+                    <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight'>
+                        Hi, I'm <span className='text-purple-100 drop-shadow-[0_0_25px_rgba(139,92,246,0.6)]'>Amit Yadav</span>
                     </h1>
-                    <h2 className='text-2xl md:text-4xl font-semibold mb-6 typewriter text-gray-200'>Full Stack Developer | AI/ML | IoT & Embedded</h2>
-                    <p className='text-lg text-gray-300 mb-8 max-w-lg leading-relaxed'>
-                        I create stunning, high-performance web experiences with modern technologies, immersive 3D interactions, and innovative design.
+                    <h2 className='text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-6 text-gray-200'>
+                        <span className='hero-typewriter'>Full Stack Developer</span>
+                        <span className='text-purple-100'> | </span>
+                        <span className='text-gray-300'>AI/ML | IoT & Embedded</span>
+                    </h2>
+                    <p className='text-sm sm:text-base md:text-lg text-gray-300 mb-8 max-w-lg leading-relaxed mx-auto md:mx-0'>
+                        I build modern digital and hardware solutions across <strong className='text-white'>Full-Stack Development, AI, IoT, and Embedded Systems</strong>, blending innovative design, technology, and engineering to turn ideas into real-world solutions.
                     </p>
-                    <div className='flex flex-wrap gap-4'>
+                    <div className='flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start'>
                         <a 
                             href='#projects' 
-                            className='px-6 py-3 bg-purple-100 text-white rounded-xl font-medium hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-0.5 transition duration-300'
+                            className='px-5 sm:px-6 py-2.5 sm:py-3 bg-purple-100 text-white rounded-xl font-medium text-sm sm:text-base hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:-translate-y-0.5 transition duration-300'
                         >
                             View Work
                         </a>
                         <a 
                             href='#contact' 
-                            className='px-6 py-3 border border-purple-100/60 rounded-xl font-medium hover:bg-purple-100/20 hover:-translate-y-0.5 transition duration-300 backdrop-blur-sm'
+                            className='px-5 sm:px-6 py-2.5 sm:py-3 border border-purple-100/60 rounded-xl font-medium text-sm sm:text-base hover:bg-purple-100/20 hover:-translate-y-0.5 transition duration-300 backdrop-blur-sm'
                         >
                             Contact Me
                         </a>
                         <a 
                             href='https://drive.google.com/file/d/1nLD83jfNBnD7C78U5mNy7MlJmoK0BQTV/view?usp=drive_link' 
-                            className='px-6 py-3 bg-dark-400/80 border border-white/10 rounded-xl font-medium hover:bg-dark-400 hover:border-purple-100/50 hover:-translate-y-0.5 transition duration-300 backdrop-blur-sm'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='px-5 sm:px-6 py-2.5 sm:py-3 bg-dark-400/80 border border-white/10 rounded-xl font-medium text-sm sm:text-base hover:bg-dark-400 hover:border-purple-100/50 hover:-translate-y-0.5 transition duration-300 backdrop-blur-sm'
                         >
                             Resume
                         </a>
@@ -57,7 +63,7 @@ const Hero = () => {
 
                 {/* Right Side - 3D Floating Avatar with Orbital Rings & Floating Tech Badges */}
                 <div className='md:w-1/2 flex justify-center items-center relative'>
-                    <div className='relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center'>
+                    <div className='relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center'>
                         
                         {/* 3D Orbital Glow Ring 1 */}
                         <div 
@@ -75,7 +81,7 @@ const Hero = () => {
                         />
 
                         {/* Ambient Backlight Glow */}
-                        <div className='absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-purple-100/40 via-pink-100/30 to-blue-100/40 blur-2xl animate-pulse-slow' />
+                        <div className='absolute w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-tr from-purple-100/40 via-pink-100/30 to-blue-100/40 blur-2xl animate-pulse-slow' />
 
                         {/* Profile Image with 3D Float */}
                         <Motion.div
@@ -86,11 +92,11 @@ const Hero = () => {
                                 repeatType: 'loop',
                                 ease: 'easeInOut'
                             }}
-                            className='relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full p-1.5 bg-gradient-to-tr from-purple-100 via-pink-100 to-blue-100 shadow-[0_0_40px_rgba(139,92,246,0.5)]'
+                            className='relative z-10 w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full p-1.5 bg-gradient-to-tr from-purple-100 via-pink-100 to-blue-100 shadow-[0_0_40px_rgba(139,92,246,0.5)]'
                         >
                             <img 
                                 src={sanket} 
-                                alt='Profile Img' 
+                                alt='Amit Yadav - Full Stack Developer'
                                 className='w-full h-full rounded-full object-cover'
                             />
                         </Motion.div>
@@ -99,40 +105,40 @@ const Hero = () => {
                         <Motion.div
                             animate={{ y: [0, -14, 0], x: [0, 6, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                            className='absolute -top-2 left-6 z-20 flex items-center gap-2 px-3 py-2 bg-dark-200/90 border border-purple-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-purple-100/20'
+                            className='absolute -top-1 left-2 sm:-top-2 sm:left-6 z-20 flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-dark-200/90 border border-purple-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-purple-100/20'
                         >
-                            <FaReact className='text-cyan-400 text-xl animate-spin-slow' />
-                            <span className='text-xs font-semibold text-white'>React</span>
+                            <FaReact className='text-cyan-400 text-base sm:text-xl animate-spin-slow' />
+                            <span className='text-[10px] sm:text-xs font-semibold text-white'>React</span>
                         </Motion.div>
 
                         {/* 3D Floating Tech Badge 2: Python */}
                         <Motion.div
                             animate={{ y: [0, 16, 0], x: [0, -8, 0] }}
                             transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                            className='absolute top-1/4 -right-4 z-20 flex items-center gap-2 px-3 py-2 bg-dark-200/90 border border-blue-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-blue-100/20'
+                            className='absolute top-1/4 -right-2 sm:-right-4 z-20 flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-dark-200/90 border border-blue-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-blue-100/20'
                         >
-                            <FaPython className='text-yellow-400 text-xl' />
-                            <span className='text-xs font-semibold text-white'>Python</span>
+                            <FaPython className='text-yellow-400 text-base sm:text-xl' />
+                            <span className='text-[10px] sm:text-xs font-semibold text-white'>Python</span>
                         </Motion.div>
 
                         {/* 3D Floating Tech Badge 3: Node.js */}
                         <Motion.div
                             animate={{ y: [0, -12, 0], x: [0, -6, 0] }}
                             transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                            className='absolute -bottom-2 left-10 z-20 flex items-center gap-2 px-3 py-2 bg-dark-200/90 border border-green-500/40 rounded-xl backdrop-blur-md shadow-lg shadow-green-500/20'
+                            className='absolute -bottom-1 left-4 sm:-bottom-2 sm:left-10 z-20 flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-dark-200/90 border border-green-500/40 rounded-xl backdrop-blur-md shadow-lg shadow-green-500/20'
                         >
-                            <FaNodeJs className='text-green-400 text-xl' />
-                            <span className='text-xs font-semibold text-white'>Node.js</span>
+                            <FaNodeJs className='text-green-400 text-base sm:text-xl' />
+                            <span className='text-[10px] sm:text-xs font-semibold text-white'>Node.js</span>
                         </Motion.div>
 
                         {/* 3D Floating Tech Badge 4: Database / AI */}
                         <Motion.div
                             animate={{ y: [0, 14, 0], x: [0, 8, 0] }}
                             transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-                            className='absolute bottom-16 -right-2 z-20 flex items-center gap-2 px-3 py-2 bg-dark-200/90 border border-pink-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-pink-100/20'
+                            className='absolute bottom-12 sm:bottom-16 -right-1 sm:-right-2 z-20 flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-dark-200/90 border border-pink-100/40 rounded-xl backdrop-blur-md shadow-lg shadow-pink-100/20'
                         >
-                            <FaDatabase className='text-pink-400 text-lg' />
-                            <span className='text-xs font-semibold text-white'>Database</span>
+                            <FaDatabase className='text-pink-400 text-sm sm:text-lg' />
+                            <span className='text-[10px] sm:text-xs font-semibold text-white'>Database</span>
                         </Motion.div>
 
                     </div>

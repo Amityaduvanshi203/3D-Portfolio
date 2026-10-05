@@ -1,7 +1,7 @@
 import React from 'react'
 import TiltCard from './3d/TiltCard'
 
-const ProjectCard = ({ title, description, image, tech, code }) => {
+const ProjectCard = ({ title, description, image, tech, code, demo }) => {
   return (
     <TiltCard maxTilt={12} className='h-full'>
       <div className='bg-dark-200/90 border border-white/5 hover:border-purple-100/40 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl hover:shadow-[0_15px_30px_rgba(139,92,246,0.25)] flex flex-col h-full preserve-3d'>
@@ -50,11 +50,21 @@ const ProjectCard = ({ title, description, image, tech, code }) => {
               >
                 Source Code
               </a>
-            ) : (
+            ) : null}
+            {demo ? (
+              <a
+                href={demo}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex-1 text-center px-4 py-2.5 bg-dark-400/50 hover:bg-dark-400 text-gray-300 hover:text-white rounded-xl text-sm transition-colors duration-300'
+              >
+                Internal / Hardware Demo
+              </a>
+            ) : !code ? (
               <span className='flex-1 text-center px-4 py-2.5 bg-dark-400/50 text-gray-400 rounded-xl text-sm'>
                 Internal / Hardware Demo
               </span>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
@@ -63,4 +73,3 @@ const ProjectCard = ({ title, description, image, tech, code }) => {
 }
 
 export default ProjectCard
-

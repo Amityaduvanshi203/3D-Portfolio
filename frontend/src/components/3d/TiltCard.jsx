@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { motion as Motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
 const TiltCard = ({ children, className = '', maxTilt = 12, glare = true }) => {
     const cardRef = useRef(null)
@@ -45,7 +45,7 @@ const TiltCard = ({ children, className = '', maxTilt = 12, glare = true }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <motion.div
+            <Motion.div
                 style={{
                     rotateX,
                     rotateY,
@@ -65,7 +65,7 @@ const TiltCard = ({ children, className = '', maxTilt = 12, glare = true }) => {
                         className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-80 z-30"
                     />
                 )}
-            </motion.div>
+            </Motion.div>
         </div>
     )
 }
